@@ -1,0 +1,16 @@
+{
+  "$schema": "https://skills.litsquare.com/schemas/skillkit/v1/lock.schema.json",
+  "lockfile_version": 1,
+  "resolved": {
+    "./skills/accessibility-review": {
+      "content_digest": "sha256:0adb7c29004b17dcf53057933ef1a423073b9a0399038c3a030ec0d9e9416f73",
+      "source": "bundle:com.litsquare.skills/design-critique/accessibility-review",
+      "revision": "0.1.0"
+    },
+    "./skills/design-critique": {
+      "content_digest": "sha256:9242b6c1e2eb9965ab502fe2db0c765ccb1b3206b3597ea1e3e4d5901c54b55c",
+      "source": "bundle:com.litsquare.skills/design-critique/design-critique",
+      "revision": "0.1.0"
+    }
+  }
+}

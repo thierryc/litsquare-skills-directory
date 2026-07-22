@@ -1,0 +1,16 @@
+{
+  "$schema": "https://skills.litsquare.com/schemas/skillkit/v1/schema.json",
+  "schema_version": 1,
+  "name": "design-critique",
+  "version": "0.1.0",
+  "description": "Give clear design feedback and include a practical accessibility review.",
+  "license": "CC0-1.0",
+  "skills": [
+    "./skills/design-critique",
+    "./skills/accessibility-review"
+  ],
+  "dependencies": {},
+  "metadata": {
+    "litsquare.skills.display_name": "Design Critique"
+  }
+}
