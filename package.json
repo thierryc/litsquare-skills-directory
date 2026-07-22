@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "generate": "node scripts/build-indexes.ts",
-    "validate": "node scripts/validate-catalog.ts",
+    "validate": "node scripts/validate-schemas.ts && node scripts/validate-catalog.ts",
     "check": "npm run generate && npm run validate && astro check",
     "build": "npm run generate && npm run validate && astro build",
     "test": "npm run check && npm run build"
