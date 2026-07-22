@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="LitSquare Skills — Skills for work"
+  description="Add portable AI Skills once, organize them into Kits, and use them with the assistants you already know."
+>
+  <section class="hero page-shell">
+    <div class="eyebrow"><span></span> Native macOS app · In development</div>
+    <h1>Skills for work, in the AI tools your team already uses.</h1>
+    <p class="lede">
+      Add a Skill once. Organize related Skills into Kits. LitSquare Skills keeps one
+      understandable local library and handles the technical details quietly.
+    </p>
+    <div class="hero-actions">
+      <a class="button primary" href="/directory/">Explore the directory</a>
+      <a class="button secondary" href="https://github.com/thierryc/litsquare-skills-directory/issues/new/choose">Follow the project</a>
+    </div>
+    <div class="window" aria-label="Concept preview of the LitSquare Skills library">
+      <div class="window-bar"><i></i><i></i><i></i><span>LitSquare Skills</span></div>
+      <div class="window-body">
+        <aside>
+          <strong>Library</strong>
+          <a class="selected">⌂ <span>Home</span></a>
+          <a>◇ <span>Skills</span></a>
+          <a>⌕ <span>Discover</span></a>
+        </aside>
+        <div class="preview-content">
+          <div class="preview-heading"><div><small>YOUR KITS</small><h2>Ready when you are</h2></div><button>Add</button></div>
+          <div class="kit-row"><span class="kit-icon violet">D</span><div><strong>Design Critique</strong><small>2 Skills · Valid</small></div><b>›</b></div>
+          <div class="kit-row"><span class="kit-icon coral">B</span><div><strong>Brand Deep Dive</strong><small>3 Skills · Available soon</small></div><b>›</b></div>
+          <div class="health"><span>✓</span><div><strong>Your local library is healthy</strong><small>No files are duplicated between assistants.</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps page-shell" aria-labelledby="how-heading">
+    <p class="section-label">A calmer way to work</p>
+    <h2 id="how-heading">Three ideas, no terminal required.</h2>
+    <div class="step-grid">
+      <article><span>01</span><h3>Add once</h3><p>Review what a Skill contains, where it came from, and what it may need before adding it.</p></article>
+      <article><span>02</span><h3>Build a Kit</h3><p>Group useful Skills around the work—not around hidden folders or a particular vendor.</p></article>
+      <article><span>03</span><h3>Stay in control</h3><p>Local edits are protected. Changes are staged, auditable, recoverable, and written in human language.</p></article>
+    </div>
+  </section>
+
+  <section class="audience-band">
+    <div class="page-shell audience-grid">
+      <div><p class="section-label">Designed for real teams</p><h2>Start with the work, not the machinery.</h2></div>
+      <div class="pills" aria-label="Initial audiences"><span>Brand</span><span>Product design</span><span>Research</span><span>Content</span><span>Marketing</span><span>Design operations</span></div>
+    </div>
+  </section>
+
+  <section class="principles page-shell">
+    <div class="principle-main">
+      <p class="section-label">Local by default</p>
+      <h2>Your library stays understandable and portable.</h2>
+      <p>LitSquare Skills uses ordinary folders and Markdown, requires no LitSquare account, and does not execute scripts packaged with a Skill.</p>
+      <a class="text-link" href="/standards/">Read the interoperability approach →</a>
+    </div>
+    <div class="principle-list">
+      <div><strong>One source of truth</strong><span>Store each Skill once.</span></div>
+      <div><strong>Review before change</strong><span>Installation is never discovery.</span></div>
+      <div><strong>Practical undo</strong><span>Backups and audit history are built in.</span></div>
+      <div><strong>Open formats</strong><span>Agent Skills stays intact.</span></div>
+    </div>
+  </section>
+
+  <section class="closing page-shell">
+    <p class="section-label">Building in public</p>
+    <h2>The local library comes first.</h2>
+    <p>The directory is open for schemas, documentation, and feedback while the native app completes its safety foundation.</p>
+    <a class="button primary" href="https://github.com/thierryc/litsquare-skills-directory">View the public repository</a>
+  </section>
+</BaseLayout>

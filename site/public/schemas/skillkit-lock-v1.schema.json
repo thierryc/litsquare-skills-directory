@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills.litsquare.com/schemas/skillkit/v1/lock.schema.json",
+  "title": "LitSquare SkillKit lockfile v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "lockfile_version", "resolved"],
+  "properties": {
+    "$schema": { "const": "https://skills.litsquare.com/schemas/skillkit/v1/lock.schema.json" },
+    "lockfile_version": { "const": 1 },
+    "resolved": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "pattern": "^\\./skills/[a-z0-9]+(?:-[a-z0-9]+)*$" },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["content_digest"],
+        "properties": {
+          "content_digest": { "$ref": "#/$defs/digest" },
+          "artifact_digest": { "$ref": "#/$defs/digest" },
+          "source": { "type": "string", "minLength": 1, "maxLength": 2048 },
+          "revision": { "type": "string", "minLength": 1, "maxLength": 256 }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

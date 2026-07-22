@@ -1,0 +1,17 @@
+name: Suggest a Skill or Kit
+description: Suggest useful public content for the future directory.
+title: "[Suggestion]: "
+labels: [suggestion, directory]
+body:
+  - type: input
+    id: name
+    attributes: { label: Skill or Kit name }
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes: { label: Public publisher or source URL }
+    validations: { required: true }
+  - type: textarea
+    id: use
+    attributes: { label: What work would it help with? }
+    validations: { required: true }

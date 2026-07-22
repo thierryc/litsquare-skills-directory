@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Standards — LitSquare Skills" description="Open formats and interoperability choices behind LitSquare Skills.">
+  <section class="subhero page-shell">
+    <p class="section-label">Interoperability</p>
+    <h1>Keep the Skill portable. Isolate everything else.</h1>
+    <p class="lede">LitSquare Skills preserves the Agent Skills authoring format and treats packaging, collections, discovery, and control as separate versioned layers.</p>
+  </section>
+  <section class="standards-grid page-shell">
+    <article><span>01</span><h2>Agent Skills</h2><p>A Skill remains a folder with uppercase <code>SKILL.md</code>. LitSquare metadata never becomes a mandatory field inside it.</p></article>
+    <article><span>02</span><h2><code>.skill</code></h2><p>A ZIP-compatible single-Skill package following the interoperable Gemini root layout, with no private manifest.</p></article>
+    <article><span>03</span><h2><code>.skillkit</code></h2><p>An experimental LitSquare collection with a manifest, lockfile, and extracted Skills—never an execution graph.</p></article>
+    <article><span>04</span><h2>Adapters</h2><p>Draft discovery and MCP versions stay behind explicit adapters so format changes cannot rewrite user content.</p></article>
+  </section>
+  <section class="schema-panel page-shell">
+    <div><p class="section-label">Normative v1 files</p><h2>Schemas are public and testable.</h2></div>
+    <ul>
+      <li><a href="/schemas/skillkit-v1.schema.json">SkillKit manifest schema</a></li>
+      <li><a href="/schemas/skillkit-lock-v1.schema.json">SkillKit lock schema</a></li>
+      <li><a href="/schemas/catalog-v1.schema.json">Catalog record schema</a></li>
+      <li><a href="/catalog/v1/index.json">Generated catalog index</a></li>
+    </ul>
+  </section>
+</BaseLayout>

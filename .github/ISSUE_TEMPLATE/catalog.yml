@@ -1,0 +1,20 @@
+name: Directory listing correction
+description: Report an incorrect publisher, source, digest, license, or listing status.
+title: "[Directory]: "
+labels: [directory]
+body:
+  - type: input
+    id: record
+    attributes:
+      label: Listing ID or URL
+    validations: { required: true }
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs correction?
+    validations: { required: true }
+  - type: input
+    id: evidence
+    attributes:
+      label: Publisher or source evidence
+      placeholder: https://example.com/...

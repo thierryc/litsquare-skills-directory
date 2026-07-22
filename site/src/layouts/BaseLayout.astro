@@ -1,0 +1,49 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f4f2ed" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="LitSquare Skills home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span>LitSquare Skills</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/directory/">Directory</a>
+        <a href="/standards/">Standards</a>
+        <a href="https://github.com/thierryc/litsquare-skills-directory/issues">Feedback</a>
+      </nav>
+    </header>
+    <main id="content">
+      <slot />
+    </main>
+    <footer>
+      <p>Local-first tools for portable AI Skills.</p>
+      <div>
+        <a href="https://github.com/thierryc/litsquare-skills-directory">GitHub</a>
+        <a href="https://github.com/thierryc/litsquare-skills-directory/blob/main/SECURITY.md">Security</a>
+        <a href="/schemas/skillkit-v1.schema.json">Schemas</a>
+      </div>
+    </footer>
+  </body>
+</html>
